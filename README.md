@@ -44,7 +44,7 @@ After that the update process will be:
 
 #### Example Command
 
-`java -jar gtnh-nightly-updater.jar -M daily -c --add -s CLIENT -m "/mnt/games/Minecraft/Instances/GTNH_Nightly/.minecraft/" --add -s SERVER -m "/mnt/docker/appdata/minecraft/gtnh/"`
+`java -jar gtnh-nightly-updater.jar -M daily --add -s CLIENT -m "/mnt/games/Minecraft/Instances/GTNH_Nightly/.minecraft/" --add -s SERVER -m "/mnt/docker/appdata/minecraft/gtnh/"`
 
 ### Caching
 The cache directory can be found at:  
@@ -59,8 +59,27 @@ The following 2 files can be placed in the cache directory to include or exclude
 Local Asset File:
 - File Name: local-assets.txt
 - Format: MOD_NAME|SIDE
-- List of mods to be included in addition to the manifest's mods list. Use mod name from the GTNH maven. (RTG|BOTH, etc)
+- List of mods to be included in addition to the [manifest's mods list](https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/releases/manifests/daily.json). Use mod name from the GTNH maven. (RTG|BOTH, etc)
+Example:
+```
+RTG|BOTH
+Climate-Control|BOTH
+JustEnoughCalculation|CLIENT
+WDMla|BOTH
+```
 
 Exclusions:  
 - File Name: mod-exclusions.txt
 - Mods to be excluded from the update process (JourneyMap, etc)
+- Uses names from the [manifest's mods list](https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/releases/manifests/daily.json)
+Example:   
+```
+Realistic-World-Gen
+DefaultWorldGenerator
+DefaultServerList
+BetterCrashes
+JourneyMap
+JourneyMapServer
+Craft-Presence
+oauth
+```
