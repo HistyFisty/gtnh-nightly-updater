@@ -60,6 +60,7 @@ Local Asset File:
 - File Name: local-assets.txt
 - Format: MOD_NAME|SIDE
 - List of mods to be included in addition to the [manifest's mods list](https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/releases/manifests/daily.json). Use mod name from the GTNH maven. (RTG|BOTH, etc)
+  
 Example:
 ```
 RTG|BOTH
@@ -72,7 +73,8 @@ Exclusions:
 - File Name: mod-exclusions.txt
 - Mods to be excluded from the update process (JourneyMap, etc)
 - Uses names from the [manifest's mods list](https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/releases/manifests/daily.json)
-Example:   
+  
+Example:     
 ```
 Realistic-World-Gen
 DefaultWorldGenerator
