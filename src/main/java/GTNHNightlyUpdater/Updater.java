@@ -230,7 +230,7 @@ public class Updater {
                             val zipFile = zip.get();
 
                             // should be up one
-                            extractZip(zipFile, rootMinecraftDir.getParent());
+                            extractZip(zipFile, rootMinecraftDir.toAbsolutePath().getParent().normalize());
                         }
                     }
                 }
